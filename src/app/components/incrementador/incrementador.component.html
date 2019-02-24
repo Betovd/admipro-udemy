@@ -1,0 +1,15 @@
+<div class="card-body">
+    <h5 class="card-title">{{leyenda}}</h5>
+    <div class="input-group">
+        <div class="input-group-prepend" id="button-addon3">
+            <button class="btn btn-outline-primary" type="button" (click)="cambiarValor(-5)">
+                        <i class="mdi mdi-minus"></i>
+                    </button>
+            <button class="btn btn-outline-primary" type="button" (click)="cambiarValor(+5)">
+                        <i class=" mdi mdi-plus "></i>
+            </button>
+        </div>
+        <input #txtProgreso type="number" class="form-control " name="porcentaje" [(ngModel)]="porcentaje" (ngModelChange)="onChange($event)" min="0" max="100" aria-describedby="button-addon3">
+    </div>
+
+</div>

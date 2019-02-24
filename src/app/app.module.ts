@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 // Modulos
 import { PagesModule } from './pages/pages.module';
 
+import { FormsModule } from '@angular/forms';
+
 // Compponent
 
 import { AppComponent } from './app.component';
@@ -26,7 +28,7 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NopagefoundComponent
+    NopagefoundComponent,
     // DashboardComponent,
     // ProgressComponent,
     // Graficas1Component,
@@ -38,7 +40,8 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
