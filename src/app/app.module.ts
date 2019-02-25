@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+// servicios
+import { ServiceModule } from './services/service.module';
+
+
 // Modulos
 import { PagesModule } from './pages/pages.module';
 
@@ -41,7 +45,8 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

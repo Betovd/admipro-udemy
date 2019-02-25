@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graficos1Component } from './graficos1/graficos1.component';
 import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.component';
+import { AccoutSetingsComponent } from './accout-setings/accout-setings.component';
 
 
 
@@ -17,6 +18,7 @@ const pagesRouter: Routes = [
       {path: 'dashboard', component: DashboardComponent},
       {path: 'progress', component: ProgressComponent},
       {path: 'graficas1', component: Graficos1Component},
+      {path: 'acoutseting', component: AccoutSetingsComponent},
       {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
       {path: '**', component: NopagefoundComponent}
      ]

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-
+import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from '../shared/header/header.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.component';
-
 
 @NgModule({
   declarations: [
@@ -18,9 +18,12 @@ import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.componen
     SidebarComponent,
     BreadcrumbsComponent
   ],
-  imports: [],
+  imports: [
+    RouterModule,
+    CommonModule
+  ],
   providers: [],
-
 })
-
-export class SharedModule { }
+export class SharedModule {
+  static PagesRoutes: any;
+}
