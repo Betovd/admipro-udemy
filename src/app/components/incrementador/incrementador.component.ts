@@ -20,24 +20,42 @@ export class IncrementadorComponent implements OnInit {
   }
 
 
+  // BtnDesactivar(event) {
+
+  //   const selectores: any = document.getElementById({ " btn_minus, btn_plud "});
+
+  //   if ( this.porcentaje === 100 ) {
+  //     event.classList.add('disabled');
+  //   }
+  //   if ( this.porcentaje === 0) {
+  //     event.classList.remove('disabled');
+  //   }
+
+  // }
+
+
+
+
+
 
 
   onChange(newValue: number) {
-    
+
    // let elemHTML: any = document.getElementsByName('porcentaje')[0];
 
     if (newValue >= 100 ) {
       this.porcentaje = 100;
       this.txtProgreso.nativeElement.value = 100;
-    } else if ( newValue <= 0 ) {
+    }
+    if ( newValue < 0 ) {
       this.porcentaje = 0;
       this.txtProgreso.nativeElement.value = 0;
-      } else {
-        this.porcentaje = newValue;
       }
 
-    this.txtProgreso.nativeElement.value = this.porcentaje;
-    this.cambioProgreso.emit( this.porcentaje );
+    this.porcentaje = newValue;
+    this.txtProgreso.nativeElement.value = newValue;
+    this.cambioProgreso.emit( newValue );
+
   }
 
 
@@ -51,7 +69,7 @@ export class IncrementadorComponent implements OnInit {
       this.porcentaje = 0;
       return;
     }
-
+    //this.BtnDesactivar(event);
     this.porcentaje = this.porcentaje + valor;
     this.cambioProgreso.emit( this.porcentaje );
     this.txtProgreso.nativeElement.focus();

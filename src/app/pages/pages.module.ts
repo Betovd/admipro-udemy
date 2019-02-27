@@ -20,6 +20,9 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { GraficaDonaComponent } from '../components/grafica-dona/grafica-dona.component';
 import { AccoutSetingsComponent } from './accout-setings/accout-setings.component';
 import { SharedModule } from '../shared/shared.module';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+
 
 
 
@@ -36,7 +39,9 @@ import { SharedModule } from '../shared/shared.module';
     IncrementadorComponent,
     Graficos1Component,
     GraficaDonaComponent,
-    AccoutSetingsComponent
+    AccoutSetingsComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   exports: [
     DashboardComponent,
@@ -44,7 +49,8 @@ import { SharedModule } from '../shared/shared.module';
     PagesComponent,
     Graficos1Component,
     GraficaDonaComponent,
-    AccoutSetingsComponent
+    AccoutSetingsComponent,
+    PromesasComponent
   ],
   imports: [
     SharedModule,
